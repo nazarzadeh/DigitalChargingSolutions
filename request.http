@@ -1,0 +1,35 @@
+###
+
+# curl --location --request POST 'http://localhost:8080/cdr'
+#--header 'Content-Type: application/json'
+#--data-raw '{
+#    "sessionId": "1",
+#    "vehicleId": "2",
+#    "startTime": "2022-01-01T10:00:00",
+#    "endTime": "2022-01-01T11:00:00",
+#    "totalCost": 10.50
+#}'
+POST http://localhost:8080/cdr
+Content-Type: application/json
+
+{
+  "sessionId": "102",
+  "vehicleId": "103",
+  "startTime": "2020-05-01T11:00:01",
+  "endTime": "2020-06-01T11:00:00",
+  "totalCost": 10
+}
+
+###
+# curl --location --request GET 'http://localhost:8080/cdr/vehicle/2?sortBy=startTime&sortDirection=ASC'
+GET http://localhost:8080/cdr/vehicle/103?sortBy=startTime&sortDirection=DESC
+
+###
+
+# curl --location --request GET 'http://localhost:8080/cdr/1'
+GET http://localhost:8080/cdr/63f4e63aa8f4cc73c2cc0feb2
+
+###
+
+
+
